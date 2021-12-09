@@ -56,7 +56,7 @@ const cars = [
         manufacturer: 'Seat',
         model: 'Ibiza',
         type: 'metano'
-    }
+    },
     {
         manufacturer: 'Audi',
         model: 'R8',
@@ -64,14 +64,14 @@ const cars = [
     },
 ];
 
-const gasolineCars = cars.filter( (auto) >= auto.type === 'benzina');
+const gasolineCars = cars.filter( (auto) => auto.type.toLowerCase() === 'benzina');
 
 const dieselCars = cars.filter( (auto) => {
-    auto.type === 'diesel';
+    return auto.type.toLowerCase() === 'diesel';
 });
 
 const otherCars = cars.filter( (auto) => {
-    return auto.type !== 'benzina' || auto.type !== 'diesel';
+    return auto.type.toLowerCase() !== 'benzina' && auto.type.toLowerCase() !== 'diesel';
 });
 
 console.log('Auto a benzina');
@@ -84,3 +84,7 @@ console.log(dieselCars);
 
 console.log('Tutte le altre auto');
 console.log(otherCars);
+
+// 1- Dato un array di oggetti contenenti proprietà di automobili come Casa madre, modello e tipo carburante, filtrare e stampare in console le automobili a benzina, diesel e tutte le altre.
+// 2- Si, riga59 manca la ',' ; a riga67 modificare '>=' con '=>'
+// 3- Si, a riga 67,70 e 74 modifichiamo 'auto.type' in modo tale da "leggere" sia i caratteri maiuscoli che minuscoli; a riga 70 aggiungere return; a riga 74 sostituire OR con AND
