@@ -86,26 +86,26 @@ function checkAccessImproved() {
     let grantAccess = false;
 
     for (let i = 0; i < addresses.length; i++) {
-     const email = addresses[i];
+        const email = addresses[i];
         
-      if (userEmail.length > 5) {
+        if (userEmail.length > 5) {
             
-        if (email === userEmail) {
-        grantAccess = true;            
+            if (email === userEmail) {
+            grantAccess = true;            
             
-      }
-        
+            }      
+        }
     }
 
-    if (grantAccess) {
+    if (grantAccess === true) {
         console.log('Accesso consentito!');
     } else {
         console.log('Accesso negato!');
     }
-    }
-}    
+}
+  
 checkAccessImproved();
 
 // 1- Dato un array di 4 email, chiediamo all'utente di inserire la propria, se è presente nell'array e se la lunghezza dell'email è maggiore di 6 caratteri stampiamo in console l'accesso che sarà consentito o negato
-// 2- Si, rimuovere gli apici da true riga94 in quanto non è una stringa ma un valore booleano; manca una graffa che chiuda la funzione a riga105
+// 2- Si, rimuovere gli apici da true riga94 in quanto non è una stringa ma un valore booleano; manca una graffa che chiuda la funzione a riga98; indentare bene
 // 3- No
